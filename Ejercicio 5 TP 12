@@ -1,0 +1,23 @@
+function nuevaFraseMayuscula(origen) {
+    let index = 0;
+    let longitud = 5;
+    let palabra;
+    let newChain ="";
+    let newChainn ="";
+    while (origen[index] !== ".") {
+        while (origen[index] === " ") {
+            index++;
+        }
+        palabra ="";
+        while (origen[index] !== " " && origen[index] !== ".") {
+            palabra += origen[index];
+            index++;
+        }
+        if ((palabra.startsWith("a") && palabra.endsWith("o")) && (palabra.length > longitud)) {
+            newChain += palabra + " "; 
+        }
+    }
+    newChainn = newChain.trim();
+    return newChainn.toUpperCase() + ".";
+}
+console.log(nuevaFraseMayuscula("armamoo anterio asi vamos a ir amimo."));
