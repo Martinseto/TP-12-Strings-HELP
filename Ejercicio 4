@@ -1,0 +1,12 @@
+function CortarCadena (palabra) {
+    let txt = "Baje 10 grados la temperatura de procesador";
+    let txtMayus = txt.toUpperCase();
+    let valor = txtMayus.indexOf(palabra.toUpperCase());
+    if (valor !== -1) {
+        let result = txt.slice(valor);
+        return result;
+    } else {
+        return valor;
+    }
+}
+console.log(CortarCadena("B"));
